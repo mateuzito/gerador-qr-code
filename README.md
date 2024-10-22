@@ -3,7 +3,7 @@
 Este projeto é um gerador de QR Code simples e eficiente, criado para transformar links, textos ou informações em QR Codes escaneáveis. Com uma interface intuitiva, ele permite a criação rápida de QR Codes.
 
 🌐 **Visite o site:**
-[geradorqrcode.vercel.app](https://geradorqrcode.vercel.app)
+[geradordecodeqr.vercel.app](https://geradordecodeqr.vercel.app)
 
 ## 📷 Projeto
 
