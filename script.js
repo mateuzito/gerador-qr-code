@@ -1,8 +1,8 @@
 const wrapper = document.querySelector(".wrapper"),
   qrInput = wrapper.querySelector(".form input"),
   generateBtn = wrapper.querySelector(".form button"),
-  qrImg = wrapper.querySelector(".qr-code img");
-downloadBtn = document.getElementById("download-btn");
+  qrImg = wrapper.querySelector(".qr-code img"),
+  downloadBtn = document.getElementById("download-btn");
 let preValue;
 
 generateBtn.addEventListener("click", () => {
@@ -19,18 +19,37 @@ generateBtn.addEventListener("click", () => {
   });
 });
 
+let downloadCounter = 1;
+let lastDownloadDate = "";
+
 downloadBtn.addEventListener("click", () => {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, "0");
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const year = String(now.getFullYear()).slice(-2);
+
+  const today = `${day}-${month}-${year}`;
+
+  if (today !== lastDownloadDate) {
+    downloadCounter = 1;
+    lastDownloadDate = today;
+  }
+
   fetch(qrImg.src)
     .then((res) => res.blob())
     .then((blob) => {
       const url = URL.createObjectURL(blob);
+      const fileName = `qrcode${downloadCounter}_${today}.png`;
+
       const a = document.createElement("a");
       a.href = url;
-      a.download = "qrcode.png";
+      a.download = fileName;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
+
+      downloadCounter++;
     })
     .catch((err) => console.error("Erro ao baixar o Qr Code", err));
 });
