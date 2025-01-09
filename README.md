@@ -1,6 +1,6 @@
 # 💬 Gerador QR Code
 
-Este projeto é um gerador de QR Code simples e eficiente, criado para transformar links, textos ou informações em QR Codes escaneáveis. Com uma interface intuitiva, ele permite a criação rápida de QR Codes.
+Este projeto é um leitor e gerador de QR Code simples e eficiente, criado para transformar links, textos ou informações em QR Codes escaneáveis e também lê-los. Com uma interface intuitiva, ele permite a criação rápida de QR Codes e a fácil leitura de um QR Code.
 
 🌐 **Visite o site:**
 [geradordecodeqr.vercel.app](https://geradordecodeqr.vercel.app)
@@ -21,6 +21,7 @@ Este projeto é um gerador de QR Code simples e eficiente, criado para transform
 
 ## ✨ Funcionalidades
 
+- **Leitura de QR Codes**: Sabe aquele QR Code que você tem no seu celular e você gostaria de ler mas o celular não disponibiliza essa função, agora é possível através desse leitor.
 - **Geração de QR Codes**: Transforme qualquer link ou texto em um QR Code.
 - **Download**: Salve o QR Code gerado como uma imagem.
 - **Interface Simples**: Interface de fácil uso e responsiva.

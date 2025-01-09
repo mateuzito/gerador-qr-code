@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/gerar-qrcode/style.css" />
+    <title>Gerador de QR Code</title>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body>
+    <div class="back">
+      <a href="/index.html"><ion-icon name="arrow-undo"></ion-icon> Voltar</a>
+    </div>
+
+    <div class="wrapper">
+      <header>
+        <h1>Gerador de Qr Code</h1>
+        <p>Cole uma URL ou insira um texto para criar um código QR</p>
+      </header>
+      <div class="form">
+        <input
+          type="text"
+          spellcheck="false"
+          placeholder="Insira um texto ou url"
+        />
+        <button>Gerar QR Code</button>
+      </div>
+      <div class="qr-code">
+        <img src="" alt="qr-code" />
+        <a id="download-btn" href="#" style="display: none">Baixar QR Code</a>
+      </div>
+    </div>
+
+    <script src="/gerar-qrcode/script.js"></script>
+  </body>
+</html>
